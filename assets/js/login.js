@@ -55,7 +55,8 @@ $(function () {
                     time: 1000
                 })
                 // 将登录成功得到的 token 字符串，保存到 localStorage 中
-                localStorage.setItem('token', res.token)
+                localStorage.setItem('token', res.token);
+                // console.log(localStorage.getItem('token'));
                 // 跳转到后台主页
                 location.href = '/index.html'
             }
