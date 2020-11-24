@@ -2,7 +2,6 @@ $(function () {
     // 获取用户信息 
     let layer = layui.layer;
     getUser()
-
     function getUser() {
         $.ajax({
             method: "GET",
@@ -24,10 +23,11 @@ $(function () {
                     $("#default-portrait").show();
                 }
                 if (res.data.nickname) {
-                    $("#username").html("欢迎&nbsp;&nbsp;" + res.data.nickname)
+                    $("#username").html("欢迎&nbsp;&nbsp;" + res.data.nickname);
                 } else {
                     $("#username").html("欢迎&nbsp;&nbsp;" + res.data.username)
                 }
+                $(".default-portrait").text(res.data.username[0].toUpperCase())
             }
             // 失败调用
             // error: function (XMLHttpRequest, textStatus, errorThrown) {
