@@ -1,3 +1,8 @@
+a {
+    transition: none;
+    transform: none;
+}
+
 /* 底部 开始*/
 .layui-footer {
     font-size: 12px;
@@ -7,10 +12,13 @@
 /* 底部结束 */
 
 /* 左侧导航区域 开始 */
-.layui-nav-child dd {
-    padding-left: 15px;
-}
 
+.layui-nav-child dd {
+    padding-left: 0;
+}
+.layui-nav-item .layui-nav-child dd a {
+    padding-left: 35px;
+}
 .layui-nav-item {
     position: relative;
 }
