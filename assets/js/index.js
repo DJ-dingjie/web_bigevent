@@ -11,9 +11,10 @@ function getUser() {
             }
             console.log(res);
             if (res.data.user_pic) {
-                $("#user-touxiang-left, #user-touxiang-right").attr("src", res.data.user_pic)
-                $("#user-touxiang-left, #user-touxiang-right").show();
+                $("#user-touxiang-left, #user-touxiang-right").attr("src", res.data.user_pic);
                 $("#default-portrait, .right-portrait").hide();
+                $("#user-touxiang-left, #user-touxiang-right").show();
+                
             } else {
                 $("#user-touxiang-left, #user-touxiang-right").hide();
                 $("#default-portrait").show();
@@ -36,41 +37,7 @@ $(function () {
 
     let layer = layui.layer;
     getUser()
-    function getUser() {
-        $.ajax({
-            method: "GET",
-            url: "/my/userinfo",
-            success: function (res) {
-                if (res.status !== 0) {
-                    layer.msg(res.message, {
-                        time: 1500
-                    });
-                    return
-                }
-                // console.log(res);
-                if (res.data.user_pic) {
-                    $("#user-touxiang-left, #user-touxiang-right").attr("src", res.data.uer_pic)
-                    $("#user-touxiang-left, #user-touxiang-right").show();
-                    $("#default-portrait").hide();
-                } else {
-                    $("#user-touxiang-left, #user-touxiang-right").hide();
-                    $("#default-portrait").show();
-                }
-                if (res.data.nickname) {
-                    $("#username").html("欢迎&nbsp;&nbsp;" + res.data.nickname);
-                } else {
-                    $("#username").html("欢迎&nbsp;&nbsp;" + res.data.username)
-                }
-                $(".default-portrait").text(res.data.username[0].toUpperCase())
-            }
-            // 失败调用
-            // error: function (XMLHttpRequest, textStatus, errorThrown) {
-            //     console.log(XMLHttpRequest);
-            //     console.log(textStatus);
-            //     console.log(errorThrown);
-            // }
-        });
-    }
+    
 
 
     // 获取用户信息 
