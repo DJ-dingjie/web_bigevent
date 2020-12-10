@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 15px;
+    background-color: #f2f3f5;
+}
+
+thead th {
+    background-color: #cccccc;
+}
+/* 筛选区域 */
+.layui-input-block {
+    margin-left: 0;
+}
+.layui-btn {
+    margin-bottom: 15px;
+}
+/* 表格区域 */
+.layui-table tr td  {
+    padding: 2px 15px;
+}

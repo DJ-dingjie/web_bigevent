@@ -1,0 +1,30 @@
+/* 初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 15px;
+    background-color: #f2f3f5;
+}
+
+/* 面板头部 */
+.layui-card-header {
+    display: flex;
+    justify-content: space-between;  /*  让 两个子元素  一 最左  一最右 */
+    align-items: center;  /*  垂直居中  */
+}
+
+/* end */
+
+/* 面板表格 头部 */
+thead th {
+    background-color: #cccccc;
+}
+/* 弹出层   编辑按钮 */
+.layui-form-edit {
+    margin-top: 20px;
+    padding-right: 30px;
+}
+/* end */

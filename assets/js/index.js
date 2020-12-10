@@ -37,6 +37,7 @@ $(function () {
 
     let layer = layui.layer;
     getUser()
+    // getUser()
     
 
 
@@ -66,6 +67,10 @@ $(function () {
     });
     $(".layui-layout-right dl dd").on("click", function () {
         let index = $(".layui-layout-right dl dd").index(this);
-        $($("#userCenter dl dd")[index]).addClass("layui-this").siblings("dd").removeClass("layui-this")
+        $($("#userCenter dl dd")[index]).addClass("layui-this").siblings("dd").removeClass("layui-this");
+        $("#articleCenter dl dd").removeClass("layui-this")
+    })
+    $("#articleCenter dl dd").on("click", function () {
+        $(".layui-layout-right dl dd").removeClass("layui-this")
     })
 })
