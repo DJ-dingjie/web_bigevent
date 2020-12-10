@@ -11,8 +11,8 @@ function getUser() {
             }
             console.log(res);
             if (res.data.user_pic) {
-                $("#user-touxiang-left, #user-touxiang-right").attr("src", res.data.user_pic);
                 $("#default-portrait, .right-portrait").hide();
+                $("#user-touxiang-left, #user-touxiang-right").attr("src", res.data.user_pic);
                 $("#user-touxiang-left, #user-touxiang-right").show();
                 
             } else {
@@ -20,17 +20,11 @@ function getUser() {
                 $("#default-portrait").show();
             }
             if (res.data.nickname) {
-                $("#username").html("欢迎&nbsp;&nbsp;" + res.data.nickname)
+                $("#username").show().html("欢迎&nbsp;&nbsp;" + res.data.nickname)
             } else {
-                $("#username").html("欢迎&nbsp;&nbsp;" + res.data.username)
+                $("#username").show().html("欢迎&nbsp;&nbsp;" + res.data.username)
             }
         }
-        // 失败调用
-        // error: function (XMLHttpRequest, textStatus, errorThrown) {
-        //     console.log(XMLHttpRequest);
-        //     console.log(textStatus);
-        //     console.log(errorThrown);
-        // }
     });
 }
 $(function () {
